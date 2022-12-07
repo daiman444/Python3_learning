@@ -14,6 +14,8 @@ sites = {
 
 distances = {}
 
+moscow = sites[]
+
 # TODO здесь заполнение словаря
 
 print(distances)
