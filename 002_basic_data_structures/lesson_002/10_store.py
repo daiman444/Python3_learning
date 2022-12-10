@@ -45,21 +45,39 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 
 # Вывести стоимость каждого товара на складе: один раз распечать сколько всего столов, стульев и т.д. на складе
 # Формат строки <товар> - <кол-во> шт, стоимость <общая стоимость> руб
-
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
-# TODO здесь ваш код
+table_code = goods['Стол']
+table_item0 = store[table_code][0]
+table_item1 = store[table_code][1]
 
+table_quantity0 = table_item0['quantity']
+table_quantity1 = table_item1['quantity']
+
+table_quantity_all = table_quantity0 + table_quantity1
+
+table_price0 = table_item0['price']
+table_price1 = table_item1['price']
+
+table_cost = table_quantity0 * table_price0 + table_quantity1 * table_price1
+print('Стол -', table_quantity_all, 'шт, стоимость', table_cost, 'руб')
+
+chair_total_quantity = store[goods['Стул']][0]['quantity'] + store[goods['Стул']][1]['quantity'] + store[goods['Стул']][2]['quantity']
+chair_cost0 = store[goods['Стул']][0]['quantity'] * store[goods['Стул']][0]['price']
+chair_cost1 = store[goods['Стул']][1]['quantity'] * store[goods['Стул']][1]['price']
+chair_cost2 = store[goods['Стул']][2]['quantity'] * store[goods['Стул']][2]['price']
+chair_total_cost = chair_cost0 + chair_cost1 + chair_cost2
+print('Стул -', chair_total_quantity, 'шт, стоимость', chair_total_cost, 'руб')
+
+sofa_total_quantity = store[goods['Диван']][0]['quantity'] + store[goods['Диван']][1]['quantity']
+sofa_total_cost0 = store[goods['Диван']][0]['quantity'] + store[goods['Диван']][0]['price']
+sofa_total_cost1 = store[goods['Диван']][1]['quantity'] + store[goods['Диван']][1]['price']
+sofa_total_cost = sofa_total_cost0 + sofa_total_cost1
+print('Диван -', sofa_total_quantity, 'шт, стоимость', sofa_total_cost, 'руб')
 ##########################################################################################
 # ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
 # нужно зайти в ЛМС (LMS - Learning Management System ) по адресу http://go.skillbox.ru  #
 # и оформить попытку сдачи ДЗ! Без этого ДЗ не будет проверяться!                        #
 # Как оформить попытку сдачи смотрите видео - https://youtu.be/qVpN0L-C3LU               #
 ##########################################################################################
-
-
-
-
-
-
