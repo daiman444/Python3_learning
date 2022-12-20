@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-# Поток выполнения программ
-
-print('дратути!')
-x = 34
-y = 43
-print(x * y)
-print('дотвидания!')
-
-# Посложнее программа
+# -*- config: utf-8 -*-
 
 print('дратути!')
 my_family_height = [
